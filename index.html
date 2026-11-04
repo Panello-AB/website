@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Panello – lanseras efter årsskiftet</title>
+<meta name="description" content="Panello förändrar hur idrottsföreningar får in extra intäkter. Tjäna pengar till klubben utan att någon behöver spendera pengar. Flera föreningar har redan anslutit sig. Lanseras efter årsskiftet.">
+<meta property="og:title" content="Panello – lanseras efter årsskiftet">
+<meta property="og:description" content="Vi förändrar hur idrottsföreningar får in extra intäkter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Blinker:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: one full-bleed brand gradient, teaser copy left, interest form card right (stacks on phone). */
+:root {
+  --violet: #6B35E8;
+  --plum: #A64FA8;
+  --ember: #D95F36;
+  --ink: #0E0E16;
+  --ink-soft: #4B5060;
+  --line: #E6E1F5;
+  --tint: #F1ECFD;
+  --deep: #3F2A8C;
+  --peach: #FFE6D3;
+  --paper: #FFFFFF;
+  --error: #B3261E;
+  --font: "Blinker", "Segoe UI", system-ui, -apple-system, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body {
+  font-family: var(--font);
+  color: var(--paper);
+  background: var(--violet);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background-image: linear-gradient(135deg, var(--violet) 0%, var(--plum) 55%, var(--ember) 100%);
+}
+.orb { position: fixed; border-radius: 50%; background: rgba(255,255,255,.13); pointer-events: none; z-index: 0; }
+.orb.a { width: 46vmax; height: 46vmax; top: -12vmax; right: -10vmax; }
+.orb.b { width: 22vmax; height: 22vmax; bottom: -6vmax; right: 18vmax; background: rgba(255,255,255,.09); }
+
+.wrap {
+  position: relative; z-index: 1;
+  max-width: 1180px; margin: 0 auto;
+  min-height: 100vh; min-height: 100dvh;
+  display: flex; flex-direction: column; gap: 48px;
+  padding-block: max(28px, env(safe-area-inset-top, 0px)) max(28px, env(safe-area-inset-bottom, 0px));
+  padding-left: max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px));
+}
+header { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.logo { display: flex; align-items: center; gap: 12px; color: var(--paper); text-decoration: none; }
+.logo-mark {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: rgba(255,255,255,.22); border: 1px solid rgba(255,255,255,.5);
+  display: grid; place-items: center;
+}
+.logo-word { font-size: 30px; font-weight: 700; letter-spacing: .2px; }
+.pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1px solid rgba(255,255,255,.7); border-radius: 999px;
+  padding: 6px 16px; font-size: 15px; font-weight: 700;
+}
+.pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--peach); box-shadow: 0 0 0 0 rgba(255,230,211,.8); animation: pulse 2s infinite; }
+@keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(255,230,211,0); } 100% { box-shadow: 0 0 0 0 rgba(255,230,211,0); } }
+
+main { flex: 1; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 56px; align-items: center; }
+.eyebrow { font-size: 15px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--peach); margin: 0 0 18px; }
+h1 { font-size: clamp(40px, 6vw, 76px); line-height: 1.02; font-weight: 800; margin: 0; text-wrap: balance; letter-spacing: -.5px; }
+h1 em { font-style: normal; color: var(--peach); }
+.lede { font-size: clamp(19px, 2vw, 23px); line-height: 1.45; max-width: 34em; margin: 26px 0 0; color: rgba(255,255,255,.95); }
+.lede s { text-decoration-thickness: 2px; text-decoration-color: rgba(255,230,211,.9); }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0 0; padding: 0; list-style: none; }
+.chips li { background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 8px 16px; font-size: 16px; font-weight: 600; }
+.launch { margin: 34px 0 0; font-size: 21px; line-height: 1.4; font-weight: 400; display: flex; align-items: flex-start; gap: 14px; max-width: 32em; }
+.launch::before { content: ""; flex: none; width: 28px; height: 2px; margin-top: .7em; background: var(--peach); }
+.launch strong { font-weight: 700; color: var(--peach); }
+
+.card {
+  background: var(--paper); color: var(--ink);
+  border-radius: 20px; padding: 32px;
+  box-shadow: 0 24px 60px rgba(40, 14, 90, .28);
+}
+.card h2 { font-size: 30px; font-weight: 800; margin: 0; line-height: 1.1; }
+.card p.sub { margin: 8px 0 22px; color: var(--ink-soft); font-size: 17px; line-height: 1.4; }
+form { display: grid; gap: 14px; }
+.field { display: grid; gap: 6px; }
+label { font-size: 15px; font-weight: 700; color: var(--deep); }
+input[type=text], input[type=email], input[type=tel] {
+  font: inherit; font-size: 17px; color: var(--ink);
+  width: 100%; padding: 12px 14px;
+  border: 1.5px solid var(--line); border-radius: 12px; background: #FBFAFE;
+  transition: border-color .15s, box-shadow .15s;
+}
+input:focus { outline: none; border-color: var(--violet); box-shadow: 0 0 0 4px rgba(107,53,232,.15); background: var(--paper); }
+input[aria-invalid=true] { border-color: var(--error); }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.consent { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; line-height: 1.4; color: var(--ink-soft); font-weight: 400; }
+.consent input { margin-top: 3px; width: 18px; height: 18px; accent-color: var(--violet); flex: none; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+button {
+  font: inherit; font-size: 19px; font-weight: 700; cursor: pointer;
+  border: 0; border-radius: 999px; padding: 15px 22px; margin-top: 4px;
+  color: var(--paper);
+  background: linear-gradient(90deg, var(--violet), var(--plum) 70%, var(--ember));
+  transition: transform .15s, box-shadow .15s, opacity .15s;
+}
+button:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(107,53,232,.35); }
+button:focus-visible { outline: 3px solid var(--deep); outline-offset: 3px; }
+button[disabled] { opacity: .6; cursor: progress; transform: none; box-shadow: none; }
+.msg { font-size: 15px; margin: 0; min-height: 0; }
+.msg.err { color: var(--error); font-weight: 600; }
+.done { text-align: left; }
+.done .check { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; background: var(--tint); margin-bottom: 16px; }
+.done p { color: var(--ink-soft); font-size: 18px; line-height: 1.45; margin: 10px 0 0; }
+
+footer { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 15px; color: rgba(255,255,255,.85); }
+footer a { color: inherit; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.4); }
+footer a:hover, footer a:focus-visible { color: var(--paper); border-color: var(--paper); outline: none; }
+
+@media (max-width: 900px) {
+  main { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .wrap { gap: 36px; }
+}
+@media (max-width: 480px) {
+  .row { grid-template-columns: 1fr; }
+  .card { padding: 24px 20px; border-radius: 18px; }
+  .logo-word { font-size: 26px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pulse { animation: none; }
+  button, input { transition: none; }
+}
+</style>
+</head>
+<body>
+<div class="orb a" aria-hidden="true"></div>
+<div class="orb b" aria-hidden="true"></div>
+
+<div class="wrap">
+  <header>
+    <a class="logo" href="/" aria-label="Panello">
+      <span class="logo-mark" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M8 2v4M16 2v4M7 16l3.5-3.5 2.5 2.5L17 11"/></svg>
+      </span>
+      <span class="logo-word">Panello</span>
+    </a>
+    <span class="pill"><span class="pulse" aria-hidden="true"></span>Lanseras efter årsskiftet</span>
+  </header>
+
+  <main>
+    <section aria-labelledby="rubrik">
+      <p class="eyebrow">För Sveriges idrottsföreningar</p>
+      <h1 id="rubrik">Vi förändrar hur idrottsföreningar får in <em>extra intäkter.</em></h1>
+      <p class="lede">Är er förening trött på att sälja <s>bingolotter</s>, <s>kakor</s>, <s>strumpor</s>, <s>godis</s>, <s>kryddor</s>, <s>kläder</s>, <s>salami</s>, <s>toalettpapper</s> och annat? Med Panello kan er förening tjäna pengar utan att någon behöver spendera pengar.</p>
+      <ul class="chips" aria-label="Fördelar">
+        <li>Inget att sälja</li>
+        <li>Inget lager</li>
+        <li>Ingen risk</li>
+        <li>Alla kan bidra oavsett storlek av plånbok</li>
+      </ul>
+      <p class="launch"><span><strong>Flera föreningar har redan anslutit sig</strong> till tjänsten, som lanseras efter årsskiftet. Vill du veta mer?</span></p>
+    </section>
+
+    <section class="card" aria-labelledby="formrubrik">
+      <div id="formView">
+        <h2 id="formrubrik">Vill du veta mer?</h2>
+        <p class="sub">Lämna dina uppgifter, så hör vi av oss och berättar mer innan lanseringen.</p>
+        <form id="interestForm" novalidate>
+          <div class="field">
+            <label for="club">Idrottsförening</label>
+            <input id="club" name="forening" type="text" autocomplete="organization" placeholder="t.ex. IFK Exempelstad" required>
+          </div>
+          <div class="field">
+            <label for="name">Namn</label>
+            <input id="name" name="namn" type="text" autocomplete="name" placeholder="För- och efternamn" required>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="phone">Telefonnummer</label>
+              <input id="phone" name="telefon" type="tel" autocomplete="tel" inputmode="tel" placeholder="070-123 45 67" required>
+            </div>
+            <div class="field">
+              <label for="email">E-post</label>
+              <input id="email" name="epost" type="email" autocomplete="email" placeholder="namn@forening.se" required>
+            </div>
+          </div>
+          <div class="hp" aria-hidden="true">
+            <label for="website">Lämna tomt</label>
+            <input id="website" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <label class="consent" for="consent">
+            <input id="consent" name="samtycke" type="checkbox" required>
+            <span>Jag godkänner att Panello sparar mina uppgifter för att kontakta mig om tjänsten.</span>
+          </label>
+          <button id="submitBtn" type="submit">Skicka</button>
+          <p id="formMsg" class="msg" role="alert" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div id="doneView" class="done" hidden>
+        <div class="check" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6B35E8" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+        </div>
+        <h2>Tack, vi hör av oss!</h2>
+        <p>Vi kontaktar dig inom kort och berättar hur din förening kan komma igång med Panello.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year">2026</span> Panello AB · Grev Turegatan 30, Stockholm</span>
+    <a href="mailto:info@panello.com">info@panello.com</a>
+  </footer>
+</div>
+
+<script>
+/*
+  INSTÄLLNING: Klistra in adressen från er formulärtjänst här.
+  Exempel med Formspree (gratis att börja med): skapa ett formulär på formspree.io,
+  ange Panellos e-postadress som mottagare och kopiera adressen, t.ex.
+  "https://formspree.io/f/abcdwxyz". Varje anmälan skickas då som ett mejl till er.
+*/
+const FORM_ENDPOINT = "";
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const form = document.getElementById("interestForm");
+const msg = document.getElementById("formMsg");
+const btn = document.getElementById("submitBtn");
+
+function showError(text) { msg.textContent = text; msg.className = "msg err"; }
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  msg.textContent = ""; msg.className = "msg";
+
+  const fields = ["club", "name", "phone", "email"].map((id) => document.getElementById(id));
+  let firstBad = null;
+  for (const f of fields) {
+    let ok = f.value.trim() !== "";
+    if (ok && f.type === "email") ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value.trim());
+    if (ok && f.type === "tel") ok = f.value.replace(/[^\d]/g, "").length >= 7;
+    f.setAttribute("aria-invalid", ok ? "false" : "true");
+    if (!ok && !firstBad) firstBad = f;
+  }
+  if (firstBad) {
+    showError("Fyll i förening, namn, ett giltigt telefonnummer och en giltig e-postadress.");
+    firstBad.focus();
+    return;
+  }
+  if (!document.getElementById("consent").checked) {
+    showError("Kryssa i rutan så att vi får spara dina uppgifter och kontakta dig.");
+    return;
+  }
+  if (document.getElementById("website").value) return; // spamskydd
+
+  if (!FORM_ENDPOINT) {
+    showError("Formuläret är inte kopplat till någon mottagare än. Lägg in adressen i FORM_ENDPOINT i koden.");
+    return;
+  }
+
+  btn.disabled = true; btn.textContent = "Skickar…";
+  try {
+    const res = await fetch(FORM_ENDPOINT, {
+      method: "POST",
+      headers: { "Accept": "application/json" },
+      body: new FormData(form)
+    });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    document.getElementById("formView").hidden = true;
+    document.getElementById("doneView").hidden = false;
+  } catch (err) {
+    showError("Det gick inte att skicka just nu. Försök igen om en stund.");
+    btn.disabled = false; btn.textContent = "Skicka";
+  }
+});
+
+form.addEventListener("input", (e) => {
+  if (e.target.getAttribute("aria-invalid") === "true") e.target.setAttribute("aria-invalid", "false");
+});
+</script>
+</body>
+</html>
